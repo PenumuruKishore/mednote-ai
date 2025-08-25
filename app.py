@@ -10,7 +10,7 @@ st.title("🩺 MedNote AI")
 st.subheader("Summarize your doctor visit from an audio recording")
 
 # API key input
-openai_api_key = st.text_input("Enter your Groq API Key", type="password")
+openai_api_key = st.secrets["OPENAI_API_KEY"]
 openai.api_base = "https://api.groq.com/openai/v1"
 
 if not openai_api_key:
